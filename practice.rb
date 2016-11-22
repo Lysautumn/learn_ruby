@@ -64,3 +64,15 @@ boolean_2 = false
 
 # boolean_3 = true || !(true || false)
 boolean_3 = true
+
+# practicing if else statement
+a = 100
+b = 1000
+
+if a < b
+    print "a is totally less than b!"
+elsif a > b
+    print "a is totally more than b!"
+else
+    print "a and b are the same!"
+end
