@@ -76,3 +76,17 @@ elsif a > b
 else
     print "a and b are the same!"
 end
+
+# practicing unless statement
+cold = false
+print "It is hot in herre" unless cold
+
+# practicing comparators/relational operators
+# test_1 should be false
+test_1 = 10 == 14
+
+# test_2 = should be false
+test_2 = 2 > 8
+
+# test_3 = should be true
+test_3 = 26 < 100
