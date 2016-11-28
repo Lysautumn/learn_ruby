@@ -90,3 +90,25 @@ test_2 = 2 > 8
 
 # test_3 = should be true
 test_3 = 26 < 100
+
+#boolean practice
+# test_1 should be true
+test_1 = ( 10 == 10 ) && ( 5 == 5 )
+
+# test_2 = should be true
+test_2 = ( 10 == 10 ) || !( 100 == 100 )
+
+# test_3 = should be false
+test_3 = ( 11 == 10 ) && !( 100 == 100 )
+
+#Daffy Duckify challenge:
+print "Thtring Pthleathe!"
+user_input = gets.chomp
+user_input.downcase!
+
+if user_input.include? "s"
+    user_input.gsub!(/s/, "th")
+    puts "Your thtring ith: #{user_input}"
+else
+    print "Your thtring ith fine ath it ith!"
+end
