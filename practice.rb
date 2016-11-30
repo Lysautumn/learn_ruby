@@ -112,3 +112,11 @@ if user_input.include? "s"
 else
     print "Your thtring ith fine ath it ith!"
 end
+
+# while loop
+i = 0
+while i < 5
+  puts i
+  # Add your code here!
+  i = i + 1
+end
