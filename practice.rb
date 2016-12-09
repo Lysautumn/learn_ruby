@@ -9,7 +9,7 @@ cat_name = gets.chomp
 
 # capitalize the first letter in the variable permanently
 cat_name.capitalize!
-puts "Your cat's name is #{cat_name}!"
+puts "Your cat's name is #{cat_name}! So cute!"
 
 # unless is similar to an if-else statement
 sleepy = false
