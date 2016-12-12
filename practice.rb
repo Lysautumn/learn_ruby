@@ -120,3 +120,19 @@ while i < 5
   # Add your code here!
   i = i + 1
 end
+
+# until loop
+counter = 1
+until counter > 10
+  puts counter
+  counter += 1
+end
+
+# for loop
+for num in 1..15 # this means loop each number between 1 and 15, including 15
+  puts num
+end
+
+for num in 1...10 # this means loop each number between 1 and 10, excluding 10
+  puts num
+end
