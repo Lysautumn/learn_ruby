@@ -136,3 +136,31 @@ end
 for num in 1...10 # this means loop each number between 1 and 10, excluding 10
   puts num
 end
+
+# loop iterator
+i = 20
+loop do
+  i -= 1
+  next if i % 2 != 0 # next if will skip numbers in the iteration
+  print "#{i}"
+  break if i <= 0 # break if will end the loop, stop an infinite loop
+end
+
+# times iterator
+5.times do
+    print "Hello World"
+end
+
+# Iteration
+puts "Give me a sentence"
+text = gets.chomp
+puts "Give me a word"
+redact = gets.chomp
+words = text.split(" ")
+words.each do |word|
+    if word == redact
+        print "REDACTED "
+    else
+        print word + " "
+    end
+end
