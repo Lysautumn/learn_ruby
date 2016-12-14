@@ -164,3 +164,37 @@ words.each do |word|
         print word + " "
     end
 end
+
+# iteration over multi-dimensional array to print out each element
+s = [["ham", "swiss"], ["turkey", "cheddar"], ["roast beef", "gruyere"]]
+
+s.each { |sub_array| sub_array.each { |element| puts element } }
+
+# iterating over hashes
+lunch_order = {
+  "Ryan" => "wonton soup",
+  "Eric" => "hamburger",
+  "Jimmy" => "sandwich",
+  "Sasha" => "salad",
+  "Cole" => "taco"
+}
+
+lunch_order.each do
+    |name, order| puts "#{order}"
+end
+
+# create a Histogram
+puts "Give me a sentence!"
+text = gets.chomp
+words = text.split
+frequencies = Hash.new(0)
+words.each do
+    |word| frequencies[word] +=1
+end
+frequencies = frequencies.sort_by do
+    |word, count| count
+end
+frequencies.reverse!
+frequencies.each do |word, count|
+    puts word + " " + count.to_s
+end
