@@ -198,3 +198,44 @@ frequencies.reverse!
 frequencies.each do |word, count|
     puts word + " " + count.to_s
 end
+
+# methods (similar to JS functions)
+def greeter(name)
+    return "Hello, #{name}!"
+end
+
+def by_three?(number)
+    if number % 3 == 0
+        return true
+    else
+        return false
+    end
+end
+
+# Ruby Symbols (are not strings)
+symbol_hash = {
+  :one => 1,
+  :two => 2,
+  :one_hundred => 100,
+}
+
+# converting between strings and symbols
+strings = ["HTML", "CSS", "JavaScript", "Python", "Ruby"]
+
+symbols = []
+
+strings.each do |s|
+    symbols.push(s.intern)
+end
+
+# hash rockets and snarky movie descriptions
+movies = {
+    :titanic => "Poor guy dies on a shipwreck after ruining a marriage",
+    :star_wars => "Poor guy loses family then realizes he has superpowers"
+}
+
+# new hash syntax and same movie descriptions
+movies = {
+    titanic: "Poor guy dies on a shipwreck after ruining a marriage",
+    star_wars: "Poor guy loses family then realizes he has superpowers"
+}
