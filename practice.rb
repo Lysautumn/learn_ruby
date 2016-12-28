@@ -239,3 +239,65 @@ movies = {
     titanic: "Poor guy dies on a shipwreck after ruining a marriage",
     star_wars: "Poor guy loses family then realizes he has superpowers"
 }
+
+# case statement
+case choice
+when "add"
+    puts "Added!"
+when "update"
+    puts "Updated!"
+when "display"
+    puts "Movies!"
+when "delete"
+    puts "Deleted!"
+else
+    puts "Error!"
+end
+
+# CRUD program
+movies = {
+    the_princess_bride: 5
+}
+
+puts "What do you want to do?"
+
+choice = gets.chomp
+
+case choice
+when "add"
+    puts "Please give me a movie title"
+    title = gets.chomp
+    if movies[title.to_sym].nil?
+        puts "How would you rate the movie (1-5)?"
+        rating = gets.chomp
+        movies[title.to_sym] = rating.to_i
+        puts "Added!"
+    else
+        puts "That movie already exists!"
+    end
+when "update"
+    puts "Please give me a movie title"
+    title = gets.chomp
+    if movies[title].nil?
+        puts "Sorry, that movie doesn't exist"
+    else
+        puts "Please give the movie a new rating (1-5)"
+        rating = gets.chomp
+        movies[title] = rating.to_i
+        puts "Updated!"
+    end
+when "display"
+    movies.each do |movie, rating|
+        puts "#{movie}: #{rating}"
+    end
+when "delete"
+    puts "What movie would you like to delete?"
+    title = gets.chomp
+    if movies[title.to_sym].nil?
+        puts "Sorry, that movie doesn't exist"
+    else
+        movies.delete(title)
+    end
+else
+    puts "Error!"
+end
