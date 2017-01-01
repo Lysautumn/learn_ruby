@@ -301,3 +301,17 @@ when "delete"
 else
     puts "Error!"
 end
+
+# ternary conditional expression: boolean, expression to evaluate if true, expression to evaluate if false
+puts 10 < 100 ? "10 is less than 100!" : "10 is not less than 100!"
+
+# Conditional assignment operator (only assign a value to a variable if nothing has been assigned to it)
+favorite_language ||= "Ruby"
+puts favorite_language
+
+# concatenation operator ("The Shovel")
+alphabet = ["a", "b", "c"]
+alphabet << "d"
+
+caption = "A giraffe surrounded by "
+caption << "weezards!"
